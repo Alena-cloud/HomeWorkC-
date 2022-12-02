@@ -4,14 +4,28 @@
 //32679 -> 6
 
 Console.WriteLine("Enter number: ");
-int anyNumber = Convert.ToInt32(Console.ReadLine())!;
-string anyNumberText = Convert.ToString(anyNumber);
+string num1 = Console.ReadLine()!;
 
-if(anyNumberText.Length > 2)
+if (num1[0] == '-')
 {
-    Console.WriteLine("- > third digit is: " + anyNumberText[2]);
-}
+    if (num1.Length >= 4)
+    {
+        Console.WriteLine(num1[3]);
+    }
+    else
+    {
+        Console.WriteLine("The number is one or two-digit");
+    }
+}     
 else
 {
-    Console.WriteLine("- > there is no third digit");
+    if (num1.Length >= 3)
+    {
+        Console.WriteLine(num1[2]);
+    }  
+    else
+    {
+        Console.WriteLine("The number is one or two-digit");
+    }
 }
+
