@@ -2,8 +2,16 @@
 //456 -> 5, 782 -> 8, 918 -> 1
 
 Console.WriteLine("Enter three-digit number: ");
+int num1 = int.Parse(Console.ReadLine()!);
 
-int threeDigitNumber = Convert.ToInt32(Console.ReadLine())!;
-string stringNumber = Convert.ToString(threeDigitNumber);
+if ((num1 >= 100) && (num1 < 1000))
+{
+    int firstDigit = num1 % 100;
+    int secondDigit = firstDigit / 10;
+    Console.WriteLine(secondDigit);
+}
+else
+{
+    Console.WriteLine("Non-three-digit number has been entered");
+}
 
-Console.WriteLine("Second digit of the three-digit number - > " + stringNumber[1]);
